@@ -1,0 +1,28 @@
+.main-container {
+    padding-bottom: 20px;
+}
+
+.jumbotron {
+    background-color: darkblue;
+    color: white;
+    text-align:center;
+}
+
+.card-body {
+    background-color: blanchedalmond;
+    border-radius: 15px;
+}
+
+#current-date {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.row-blue {
+    background-color: rgb(240, 252, 252);
+    padding-left: 20px;
+}
+
+#cbforecast {
+    margin: 20px;
+}
