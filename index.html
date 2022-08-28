@@ -15,7 +15,7 @@
     <div class = "row">
       <!--Form to search City-->
       <div id="search-section" class="col-md-4">
-          <div class="card-body">
+            <div class="card-body">
               <h5>Enter a city name to see current weather data</h5>
                 <form class="form-inline">
                     <input type = "search" placeholder="Enter name of city" class ="form-control mr-sm-2 input" id="input"/>
@@ -25,12 +25,32 @@
                       </button>
                 </form>
 
-            <div class = "cities-list" id ="cities-list"></div>
+              <div class = "cities-list" id ="cities-list">cities list</div>
 
-          </div>
-      </div>
+            </div>
+        </div>
+        <!--Container for weather columns-->
+        <div class = "col-md-8 container-left-columns">
+            <!--Current city-->
+            <div class="row">
+                <div class="card-body">
+                    <p id= "current-date"></p>
+                    <p id="city"></p>
+                    <p id="weather-icon"></p>
+                    <p id="temperature"></p>
+                    <p id="humidity"></p>
+                    <p id="wind"></p>
+                    <p id="uv"></p>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+        
     </div>
   
+
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -43,7 +63,7 @@
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"
 ></script>
-
+<!--Custom Script-->
 <script src = "./assets/script.js"></script>
 </body>
 </html>
