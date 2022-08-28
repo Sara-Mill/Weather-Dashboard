@@ -4,55 +4,144 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <title>Weather Dashboard</title>
 </head>
 <body>
+
   <!--Main container-->
-  <div class="main-container-fluid">
-    <div class = "row">
-      <!--Form to search City-->
-      <div id="search-section" class="col-md-4">
-            <div class="card-body">
-              <h5>Enter a city name to see current weather data</h5>
-                <form class="form-inline">
-                    <input type = "search" placeholder="Enter name of city" class ="form-control mr-sm-2 input" id="input"/>
-                    <!--SearchButton-->
-                    <button class ="btn btn-primary my-2 my-sm-0 search search-button"  id = "search-button" type="submit">
-                        <i class= "fas fa-seacrh-location"></i>
-                      </button>
-                </form>
+    <div class="main-container-fluid">
 
-              <div class = "cities-list" id ="cities-list">cities list</div>
-
+        <!--Jumbotron-->
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Weather Dasboard</h1>
             </div>
-        </div>
-        <!--Container for weather columns-->
-        <div class = "col-md-8 container-left-columns">
-            <!--Current city-->
-            <div class="row">
-                <div class="card-body">
-                    <p id= "current-date"></p>
-                    <p id="city"></p>
-                    <p id="weather-icon"></p>
-                    <p id="temperature"></p>
-                    <p id="humidity"></p>
-                    <p id="wind"></p>
-                    <p id="uv"></p>
+          </div>
+
+
+      <div class = "row">
+      
+      <!--Form to Search City-->
+          <div id="search-section" class="col-md-4">
+              <div class="card-body">
+                <h5>Enter a city name to see current weather data</h5>
+                    <form class="form-inline">
+                      
+                      <!--Search Input-->
+                        <input type = "search" placeholder="Enter name of city" class ="form-control mr-sm-2 input" id="input"/>
+                    
+                       <!--Search Button-->
+                        <button class ="btn btn-primary my-2 my-sm-0 search search-button"  id = "search-button" type="submit">
+                          <i class= "fas fa-seacrh-location"></i>
+                        </button>
+                    </form>
+
+                <div class = "cities-list" id ="cities-list">cities list</div>
+
+              </div>
+          </div>
+
+           <!--Container for weather columns-->
+            <div class = "col-md-8 container-left-columns">
+                <!--Current city-->
+                <div class="row">
+                    <div class="card-body">
+                        <p id= "current-date"></p>
+                        <p id="city"></p>
+                        <p id="weather-icon"></p>
+                        <p id="temperature"></p>
+                        <p id="humidity"></p>
+                        <p id="wind"></p>
+                        <p id="uv"></p>
+                    </div>
                 </div>
             </div>
-        </div>
 
+            <!--5 Day Forecast title-->
+             <div class = "row-blue">
+              <div class = "row">
+                 <div class = "forecast-title">
+                   <div class = "cbforecast">
+                      <h5>5-Day Forecast:</h5>
+                    </div>
+                 </div>
+              </div>
+             </div>
 
-        </div>
-        
+           <!--5 Day Forecast cards-->
+            <div class ="row gutters">
+
+              <!--Day 1-->
+             <div class="col">
+               <div class="card forecast-day">
+                    <div class="card-body bg-primary">
+                        <p id="day-one-date"></p>
+                       <p id="day-one-icon"></p>
+                       <p id="day-one-temperature"></p>
+                       <p id="day-one-humidity"></p>
+                       <p id="day-one-wind"></p>
+                   </div>
+               </div>
+             </div>
+
+             <!--Day 2-->
+             <div class="col">
+               <div class="card forecast-day">
+                    <div class="card-body bg-primary">
+                        <p id="day-two-date"></p>
+                       <p id="day-two-icon"></p>
+                        <p id="day-two-temperature"></p>
+                       <p id="day-two-humidity"></p>
+                        <p id = "day-two-wind"></p>
+                   </div>
+               </div>
+             </div>
+
+              <!--Day 3-->
+                <div class="col">
+                  <div class="card forecast-day">
+                    <div class="card-body bg-primary">
+                        <p id="day-three-date"></p>
+                       <p id="day-three-icon"></p>
+                       <p id="day-three-temperature"></p>
+                       <p id="day-three-humidity"></p>
+                       <p id = "day-three-wind"></p>
+                    </div>
+                   </div>
+                </div>
+
+             <!--Day 4-->
+             <div class="col">
+                <div class="card forecast-day">
+                   <div class="card-body bg-primary">
+                       <p id="day-four-date"></p>
+                       <p id="day-four-icon"></p>
+                       <p id="day-four-temperature"></p>
+                       <p id="day-four-humidity"></p>
+                       <p id = "day-four-wind"></p>
+                   </div>
+                </div>
+             </div>
+
+             <!--Day 5-->
+              <div class="col">
+                 <div class="card forecast-day">
+                    <div class="card-body bg-primary">
+                      <p id="day-five-date"></p>
+                      <p id="day-five-icon"></p>
+                      <p id="day-five-temperature"></p>
+                      <p id="day-five-humidity"></p>
+                      <p id = "day-five-wind"></p>
+                    </div>
+                  </div>
+              </div>
+
     </div>
-  
-
   </div>
 
+ 
+  <!--Bootstrap and JQeury-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script
   type="text/javascript"
