@@ -30,7 +30,7 @@
           <div id="search-section" class="col-md-4">
               <div class="card-body">
                 <h5>Enter a city name to see current weather data</h5>
-                    <form class="form-inline">
+                    <form class="form-inline" id="form">
                       
                       <!--Search Input-->
                         <input type = "search" placeholder="Enter name of city" class ="form-control mr-sm-2 input" id="input"/>
@@ -41,7 +41,7 @@
                         </button>
                     </form>
 
-                <div class = "cities-list" id ="cities-list">cities list</div>
+                <ol class = "cities-list" id ="cities-list"></ol>
 
               </div>
           </div>
@@ -50,7 +50,7 @@
             <div class = "col-md-8 container-left-columns">
                 <!--Current city-->
                 <div class="row">
-                    <div class="card-body">
+                    <div class="card-body" id ="currentWeatherCard">
                         <p id= "current-date"></p>
                         <p id="city"></p>
                         <p id="weather-icon"></p>
@@ -80,6 +80,7 @@
              <div class="col">
                 <div class="card forecast-day">
                     <div class="card-body bg-primary">
+                      
                        <p id="day-one-date"></p>
                        <p id="day-one-icon"></p>
                        <p id="day-one-temperature"></p>

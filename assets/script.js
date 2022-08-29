@@ -4,21 +4,42 @@ var apiKey = "&appid=d0b7f8bc04fadc6c90e322e2e93e7b97";
 var inputEl = document.getElementById('input');
 var searchBtnEl = document.getElementById('search-button');
 var citiesListEl = document.getElementById('cities-list');
+var cityName="";
+var localCityArray =[];
 
-//Sets the cityName in local storage
-var cityName = localStorage.getItem('cityNameStore');
 //Sets the input value in local storage
 function recordCityData() {
-  localStorage.setItem('cityNameStore', inputEl.value);
-}
+  var storedCities=[];
+  localStorage.setItem('cities', JSON.stringify(inputEl.value))
+  storedCities = JSON.parse(localStorage.getItem('cities'));
+  console.log(storedCities)
 
+  //The same function, written without JSON
+  localStorage.setItem('cities-list', inputEl.value);
+  for (var i=0; i< localStorage.length; i++) {
+   storedCities=response
+  }console.log(response)
+  }
+//Gets the cityName from local storage
+var cityName = localStorage.getItem('cities-list');
+let previousSearch=JSON.parse(localStorage.getItem("cities")); 
+if (previousSearch !== null) {
+  for (let i = 0; i < previousSearch.length; i++) {
+      if (previousSearch[i] === null) {
+          previousSearch.splice(i, i+1);
+      } else { 
+localCityArray.push(previousSearch[i]);
+      }console.log(localCityArray)
+    }
+  }
 //Append the search input from local storage to the cities list(Function to get list of searched cities)
 for (var i=0; i< localStorage.length; i++) {
   var length = [];
-  $('#cities-list').append('<p>' + localStorage.getItem(localStorage.key(i)) + '</p>');
-  console.log(length)
+  $('#cities-list').append('<li>' + localStorage.getItem(localStorage.key(i)) + '</li>');
+  console.log(localStorage)
 }
 
+//Seperate Function to store list of city names
 
 
 
