@@ -3,6 +3,8 @@
 This is a weather dashboard I made based off of a mock up.
 It uses local Storage to store data, and Open Weather Map API to poulate the fields.
 
+The site is deployed live here: https://sara-mill.github.io/Weather-Dashboard/?
+
 It still needs to be amended with search history, it currently only stores one city.
 
 It also needs to have a function added that clears the search history when the user refreshes the page.
